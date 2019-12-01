@@ -80,7 +80,7 @@ loop:
     lb $t4($t2)  
     beqz $t3,checkt2    #str1 end  
     beqz $t4,missmatch  
-    slt $t5,$t3,$t4     #compare two bytes  
+    sub $t5,$t3,$t4     #compare two bytes  
     bnez $t5,missmatch  
     addi $t1,$t1,1      #increment t1 and t2 to point to next byte  
     addi $t2,$t2,1  
